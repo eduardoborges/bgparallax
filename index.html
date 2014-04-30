@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-br">
+	<meta charset="utf-8">
+	<title>Background Parallax</title>
+
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+
+
+</head>
+
+
+	<body>
+
+		<div id="inicio" data-parallax="15">
+
+			<article>
+
+				<h1>Inicio</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				</p>
+
+			</article>
+
+		</div>
+
+		<div id="sobre" data-parallax="4">
+
+			<article>
+
+				<h1>Sobre</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				</p>
+			</div>
+
+		</article>
+
+		<script type="text/javascript" src="../jquery.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			$("[data-parallax]").each(function(){
+				var $parallax = $(this);
+
+				$(window).scroll(function(){
+
+					var posY 		= -($(window).scrollTop() / $parallax.data("parallax"));
+					var ParallaxPos = 'center ' + posY + 'px';
+					$parallax.css("background-position",ParallaxPos);
+
+				})
+
+			})
+		})
+
+		</script>
+
+
+	</body>
+
+</html>

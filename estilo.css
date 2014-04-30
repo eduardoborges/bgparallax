@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+}
+/* formatamos os elementos que possui o chamado do Parallax */
+*[data-parallax]{
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+
+	background-position: 50% 0;
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	font-family: "Arial", Futura;
+}
+
+#inicio{
+	background-image: url('bg1.jpg'); 
+}
+#sobre{
+	background-image: url('bg2.jpg'); 
+}
+
+/* agora estilizamos o <article> com o conteudo de teste */
+
+article{
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20% 0 0;
+
+	font-family: "Arial", Futura;
+	color: white;
+	text-shadow:0 0 5px #333;
+
+}
+article h1{
+	font-size: 48px;
+}
+article p{
+	font-size: 24px;
+}
